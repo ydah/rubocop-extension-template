@@ -7,7 +7,7 @@ A RuboCop Extension Template.
 - [Use this template](https://github.com/ydah/rubocop-extension-template) to create a new extension
 - Replace all occurrences of `your_extension` with your extension name
 - Replace all occurrences of `YourExtension` with your extension class name
-- Replace all occurrences of `Your Extension` with your extension description
+- Replace all occurrences of `Your Extension` with your extension name
 - Remove descriptions and files related to the example cop `YourExtension/Example`
 - You can now start writing your own cops
   - Run `bundle exec rake 'new_cop[YourExtension/YourCop]'` to generate a new cop
@@ -16,10 +16,10 @@ A RuboCop Extension Template.
 # License
 
 This template is MIT licensed. [See the accompanying page](https://opensource.org/license/mit/) for the full text.
+
 Copyright (c) 2023 Yudai TAKADA
 
-
----
+______________________________________________________________________
 
 # RuboCop Your Extension
 
