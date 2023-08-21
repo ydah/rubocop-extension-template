@@ -1,0 +1,5 @@
+name: rubocop-your_extension
+title: RuboCop Your Extension
+version: ~
+nav:
+  - modules/ROOT/nav.adoc

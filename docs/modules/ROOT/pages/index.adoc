@@ -1,0 +1,3 @@
+= RuboCop Your Extensions
+
+Here is an overview of this extension.

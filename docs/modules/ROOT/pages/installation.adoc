@@ -1,0 +1,15 @@
+= Installation
+
+Just install the `rubocop-your_extension` gem
+
+[source,bash]
+----
+gem install rubocop-your_extension
+----
+
+or if you use bundler put this in your `Gemfile`
+
+[source,ruby]
+----
+gem 'rubocop-your_extension'
+----
