@@ -4,7 +4,7 @@ A RuboCop Extension Template.
 
 # Usage
 
-- [Use this template](https://github.com/ydah/rubocop-extension-template) to create a new extension
+- [Use this template](https://github.com/new?template_name=rubocop-extension-template) to create a new extension
 - Replace all occurrences of `your_extension` with your extension name
 - Replace all occurrences of `YourExtension` with your extension class name
 - Replace all occurrences of `Your Extension` with your extension name
