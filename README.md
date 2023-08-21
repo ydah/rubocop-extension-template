@@ -1,43 +1,95 @@
 # Rubocop::Extension::Template
 
-TODO: Delete this and the text below, and describe your gem
+A RuboCop Extension Template.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/your_extension`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Usage
+
+- [Use this template](https://github.com/ydah/rubocop-extension-template) to create a new extension
+- Replace all occurrences of `your_extension` with your extension name
+- Replace all occurrences of `YourExtension` with your extension class name
+- Replace all occurrences of `Your Extension` with your extension description
+- Remove descriptions and files related to the example cop `YourExtension/Example`
+- You can now start writing your own cops
+  - Run `bundle exec rake 'new_cop[YourExtension/YourCop]'` to generate a new cop
+  - You write your cop in `lib/rubocop/cop/your_extension/your_cop.rb`
+
+# License
+
+This template is MIT licensed. [See the accompanying page](https://opensource.org/license/mit/) for the full text.
+Copyright (c) 2023 Yudai TAKADA
+
+
+---
+
+# RuboCop Your Extension
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Just install the `rubocop-your_extension` gem
 
-Install the gem and add to the application's Gemfile by executing:
-
-```
-$ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+```bash
+gem install rubocop-your_extension
 ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+or if you use bundler put this in your `Gemfile`
 
 ```
-$ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+gem 'rubocop-your_extension', require: false
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to tell RuboCop to load the Your Extension extension. There are two
+ways to do this:
 
-## Development
+### RuboCop configuration file
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Put this into your `.rubocop.yml`.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```yaml
+require: rubocop-your_extension
+```
+
+Alternatively, use the following array notation when specifying multiple extensions.
+
+```yaml
+require:
+  - rubocop-other_extension
+  - rubocop-your_extension
+```
+
+Now you can run `rubocop` and it will automatically load the RuboCop Your Extension
+cops together with the standard cops.
+
+### Command line
+
+```bash
+rubocop --require rubocop-your_extension
+```
+
+### Rake task
+
+```ruby
+RuboCop::RakeTask.new do |task|
+  task.requires << 'rubocop-your_extension'
+end
+```
+
+## The Cops
+
+All cops are located under
+[`lib/rubocop/cop/your_extension`](lib/rubocop/cop/your_extension), and contain
+examples/documentation.
+
+In your `.rubocop.yml`, you may treat the Your Extension cops just like any other
+cop. For example:
+
+```yaml
+Your Extension/FilePath:
+  Exclude:
+    - spec/my_poorly_named_spec_file.rb
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/dummy/your-extension. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/dummy/your-extension/blob/main/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Rubocop::Extension::Template project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/dummy/your-extension/blob/main/CODE_OF_CONDUCT.md).
+Checkout the [contribution guidelines](.github/CONTRIBUTING.md).
