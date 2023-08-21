@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative "lib/rubocop/extension/template/version"
+require_relative "lib/rubocop/your_extension/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "your_extension"
+  spec.name = "rubocop-your_extension"
   spec.version = Rubocop::Extension::Template::VERSION
   spec.authors = ["author name"]
   spec.email = ["author@example.com"]
 
   spec.summary = "Yout extension summary."
   spec.description = "Your extension description."
-  spec.homepage = "https://github.com/dummy/your_extension"
+  spec.homepage = "https://github.com/dummy/rubocop-your_extension"
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "#{spec.homepage}/releases"

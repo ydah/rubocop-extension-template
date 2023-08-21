@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "rubocop/extension/template"
+require "rubocop/your_extension"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
