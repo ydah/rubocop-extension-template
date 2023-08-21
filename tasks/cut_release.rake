@@ -5,7 +5,7 @@ require "bump"
 namespace :cut_release do
   %w[major minor patch pre].each do |release_type|
     desc "Cut a new #{release_type} release and create release notes."
-    task release_type => "changelog:check_clean" do
+    task release_type do
       run(release_type)
     end
   end
