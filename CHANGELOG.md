@@ -1,5 +1,5 @@
-## [Unreleased]
+## Unreleased
 
-## [0.1.0] - 2023-08-21
+## 0.1.0 - 20XX-XX-XX
 
 - Initial release
