@@ -4,7 +4,7 @@ require_relative "lib/rubocop/your_extension/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rubocop-your_extension"
-  spec.version = Rubocop::YourExtension::VERSION
+  spec.version = Rubocop::YourExtension::Version::STRING
   spec.authors = ["author name"]
   spec.email = ["author@example.com"]
 

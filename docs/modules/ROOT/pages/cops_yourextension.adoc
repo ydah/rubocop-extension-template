@@ -1,0 +1,26 @@
+= YourExtension
+
+== YourExtension/Example
+
+|===
+| Enabled by default | Safe | Supports autocorrection | Version Added | Version Changed
+
+| Pending
+| Yes
+| No
+| <<next>>
+| -
+|===
+
+Example cop that enforces the use of `#good_method` over `#bad_method`.
+
+=== Examples
+
+[source,ruby]
+----
+# bad
+bad_method
+
+# good
+good_method
+----

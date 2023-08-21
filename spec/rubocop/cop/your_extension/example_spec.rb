@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+RSpec.describe RuboCop::Cop::YourExtension::Example, :config do
+  it "registers an offense when using `#bad_method`" do
+    expect_offense(<<~RUBY)
+      bad_method
+      ^^^^^^^^^^ Use `#good_method` instead of `#bad_method`.
+    RUBY
+  end
+
+  it "does not register an offense when using `#good_method`" do
+    expect_no_offenses(<<~RUBY)
+      good_method
+    RUBY
+  end
+end

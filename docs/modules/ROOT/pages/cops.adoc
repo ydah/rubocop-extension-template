@@ -1,0 +1,3 @@
+=== Department xref:cops_yourextension.adoc[YourExtension]
+
+* xref:cops_yourextension.adoc#yourextensionexample[YourExtension/Example]

@@ -1,0 +1,12 @@
+---
+inherit_mode:
+  merge:
+    - Exclude
+
+YourExtension:
+  Enabled: true
+
+YourExtension/Example:
+  Description: 'TODO: Write a description of the cop.'
+  Enabled: pending
+  VersionAdded: '<<next>>'

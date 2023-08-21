@@ -2,6 +2,8 @@
 
 module Rubocop
   module YourExtension
-    VERSION = "0.1.0"
+    module Version
+      STRING = "0.1.0"
+    end
   end
 end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "rubocop"
-require "rubocop-committee"
+require "rubocop-your_extension"
 require "rubocop/cops_documentation_generator"
 require "yard"
 
@@ -13,7 +13,7 @@ end
 desc "Generate docs of all cops departments"
 task generate_cops_documentation: :yard_for_generate_documentation do
   generator = CopsDocumentationGenerator.new(
-    departments: %w[Committee]
+    departments: %w[YourExtension]
   )
   generator.call
 end

@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop/cop/internal_affairs
   - rubocop-performance
@@ -17,7 +19,7 @@ Metrics:
 
 Naming/FileName:
   Exclude:
-    - lib/rubocop-committee.rb
+    - lib/rubocop-your_extension.rb
 
 Style/Documentation:
   Enabled: false
